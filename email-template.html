@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chargeback Challenge - Fastboy Marketing</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333333; max-width: 600px; margin: 0 auto; padding: 20px;">
+<table role="presentation">
+    <tr>
+        <td style="padding: 20px 0; text-align: center; background-color: #f8f8f8;">
+            <h1 style="color: #0066cc; margin: 0;">Chargeback Case: Action Required</h1>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 20px 0;">
+            <p>Dear {{MERCHANT_NAME}},</p>
+            <p>We are contacting you regarding a chargeback case that requires your immediate attention. Please review the details below and take necessary action.</p>
+            <h2 style="color: #0066cc;">Case Details</h2>
+            <ul>
+                <li><strong>Transaction ID:</strong> {{TRANSACTION_ID}}</li>
+                <li><strong>Amount:</strong> {{AMOUNT}}</li>
+                <li><strong>Transaction Date:</strong> {{TRANSACTION_DATE}}</li>
+                <li><strong>Response Deadline:</strong> {{RESPONSE_DEADLINE}}</li>
+            </ul>
+            <p>To challenge this chargeback, please provide the following:</p>
+            <ol>
+                <li>A copy of the signed receipt</li>
+                <li>Any additional evidence supporting the validity of the transaction</li>
+                <li>A detailed explanation of the goods or services provided</li>
+            </ol>
+            <p>Please submit your response and supporting documents before the deadline to ensure we can process your challenge.</p>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="{{RESPONSE_PORTAL_URL}}" style="background-color: #0066cc; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">I WANT TO CHALLENGE</a>
+            </div>
+            <p style="margin-top: 30px;">If you have any questions or need assistance, please don't hesitate to contact our support team at {{SUPPORT_EMAIL}} or call us at {{SUPPORT_PHONE}}.</p>
+            <p>Thank you for your prompt attention to this matter.</p>
+            <p>Best regards,<br>{{SENDER_NAME}}<br>{{COMPANY_NAME}} Chargeback Team</p>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 20px 0; text-align: center; background-color: #f8f8f8; font-size: 12px;">
+            <p>This is an automated email. Please do not reply directly to this message.</p>
+            <p>&copy; {{CURRENT_YEAR}} {{COMPANY_NAME}}. All rights reserved.</p>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
