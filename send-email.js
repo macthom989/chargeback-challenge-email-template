@@ -8,16 +8,16 @@ let emailTemplate = fs.readFileSync(templatePath, 'utf8');
 
 // Sample data to replace variables
 const emailData = {
-    MERCHANT_NAME: 'John Doe',
-    TRANSACTION_ID: 'xx9572',
+    MERCHANT_NAME: 'Thơm Mạc',
+    MERCHANT_EMAIL: 'macthom@nail98.com',
+    WHMCS_ID: '26121998',
+    CARD_NUMBER: 'xx9999',
     AMOUNT: '$36.05',
     TRANSACTION_DATE: '06/28/2024',
-    RESPONSE_DEADLINE: '08/23/2024',
+    RESPONSE_BY: '11/01/2024',
     RESPONSE_PORTAL_URL: 'https://dev.gci-payment-gateway/chargeback-challenge/id',
-    SUPPORT_EMAIL: 'support@example.com',
-    SUPPORT_PHONE: '(123) 456-7890',
-    SENDER_NAME: 'Phát Nguyễn - AE Team',
-    COMPANY_NAME: 'Fastboy Marketing Company',
+    SUPPORT_EMAIL: 'contact@fastboy.net',
+    SUPPORT_PHONE: '(832) 968-6668',
     CURRENT_YEAR: new Date().getFullYear()
 };
 
@@ -41,18 +41,19 @@ nodemailer.createTestAccount((err, account) => {
         host: "sandbox.smtp.mailtrap.io",
         port: 2525,
         auth: {
-            user: "5e87e29aa3f5e6",
-            pass: "9fbf04261fddd8"
+            user: "3358de4d57bf5a",
+            pass: "7ffd678cbb10aa"
         }
     });
 
     // Message object
     let message = {
-        from: `${emailData.SENDER_NAME} <${emailData.SUPPORT_EMAIL}>`,
-        to: 'Merchant Name <merchant@example.com>',
-        subject: 'Chargeback Case: Action Required',
+        from: `Phát Nguyễn - <${emailData.SUPPORT_EMAIL}>`,
+        to: `${emailData.MERCHANT_NAME} <${emailData.MERCHANT_EMAIL}>`,
+        subject: `CHARGEBACK CASE ${emailData.WHMCS_ID}#`,
         html: emailTemplate
     };
+
 
     transporter.sendMail(message, (err, info) => {
         if (err) {
@@ -67,5 +68,5 @@ nodemailer.createTestAccount((err, account) => {
 });
 
 // // Log the email content to the console (for demonstration purposes)
-// console.log('Email Content:');
-// console.log(emailTemplate);
+console.log('Email Content:');
+console.log(emailTemplate);
