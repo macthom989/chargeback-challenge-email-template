@@ -1,49 +1,37 @@
-<!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chargeback Challenge - Fastboy Marketing</title>
-</head>
-<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333333; max-width: 600px; margin: 0 auto; padding: 20px;">
-<table role="presentation">
-    <tr>
-        <td style="padding: 20px 0; text-align: center; background-color: #f8f8f8;">
+<div style="font-family: 'American Typewriter', sans-serif; line-height: 1.6; color: #333333; max-width: 600px; margin: 0 auto; padding: 20px;">
+    <div>
+        <div style="padding: 20px 0; text-align: center; background-color: #f8f8f8;">
             <h1 style="color: #0066cc; margin: 0;">Chargeback Case: Action Required</h1>
-        </td>
-    </tr>
-    <tr>
-        <td style="padding: 20px 0;">
-            <p>Dear {{MERCHANT_NAME}},</p>
-            <p>We are contacting you regarding a chargeback case that requires your immediate attention. Please review the details below and take necessary action.</p>
-            <h2 style="color: #0066cc;">Case Details</h2>
+        </div>
+    </div>
+    <div>
+        <div style="padding: 20px 0;">
+            <p>Kính gửi quý anh/chị: {{MERCHANT_NAME}},</p>
+            <p>Chúng tôi gửi FAX và receipt liên quan đến một trường hợp khiếu nại để quý anh/chị chủ động liên hệ khách hàng tìm hiểu nguyên nhân và cung cấp receipt có chữ ký để challenge. Yêu cầu này đòi hỏi anh/chị phải xử lý ngay lập tức. Vui lòng xem xét các chi tiết bên dưới và thực hiện hành động cần thiết.
+            </p>
+            <div style="color: #0066cc;font-weight: bold">THÔNG TIN CHI TIẾT:</div>
             <ul>
-                <li><strong>Transaction ID:</strong> {{TRANSACTION_ID}}</li>
+                <li><strong>Card Number (4 last digit card number):</strong> {{CARD_NUMBER}}</li>
                 <li><strong>Amount:</strong> {{AMOUNT}}</li>
                 <li><strong>Transaction Date:</strong> {{TRANSACTION_DATE}}</li>
-                <li><strong>Response Deadline:</strong> {{RESPONSE_DEADLINE}}</li>
+                <li><strong>Response by:</strong> {{RESPONSE_BY}}</li>
             </ul>
-            <p>To challenge this chargeback, please provide the following:</p>
-            <ol>
-                <li>A copy of the signed receipt</li>
-                <li>Any additional evidence supporting the validity of the transaction</li>
-                <li>A detailed explanation of the goods or services provided</li>
-            </ol>
-            <p>Please submit your response and supporting documents before the deadline to ensure we can process your challenge.</p>
+            <p>Anh/chị vui lòng gửi lại <strong>RECEIPT</strong> trực tiếp cho nhân viên Account Executive (Bộ phận Quản lý tài khoản) trước ngày {{RESPONSE_BY}} để chúng tôi tiếp tục hỗ trợ cho giao dịch này.</p>
             <div style="text-align: center; margin-top: 30px;">
-                <a href="{{RESPONSE_PORTAL_URL}}" style="background-color: #0066cc; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">I WANT TO CHALLENGE</a>
+                <a href="{{RESPONSE_PORTAL_URL}}" style="background-color: #0066cc; color: #ffffff; padding: 20px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">Anh/Chị có muốn challenge hay không?</a>
             </div>
-            <p style="margin-top: 30px;">If you have any questions or need assistance, please don't hesitate to contact our support team at {{SUPPORT_EMAIL}} or call us at {{SUPPORT_PHONE}}.</p>
-            <p>Thank you for your prompt attention to this matter.</p>
-            <p>Best regards,<br>{{SENDER_NAME}}<br>{{COMPANY_NAME}} Chargeback Team</p>
-        </td>
-    </tr>
-    <tr>
-        <td style="padding: 20px 0; text-align: center; background-color: #f8f8f8; font-size: 12px;">
-            <p>This is an automated email. Please do not reply directly to this message.</p>
-            <p>&copy; {{CURRENT_YEAR}} {{COMPANY_NAME}}. All rights reserved.</p>
-        </td>
-    </tr>
-</table>
-</body>
+            <p style="margin-top: 30px;">Nếu anh/chị có bất kỳ câu hỏi nào hoặc cần hỗ trợ, vui lòng liên hệ với nhóm hỗ trợ của chúng tôi theo địa chỉ {{SUPPORT_EMAIL}} hoặc gọi cho chúng tôi theo số {{SUPPORT_PHONE}}.</p>
+            <p>Cảm ơn anh/chị đã quan tâm kịp thời đến vấn đề này.</p>
+            <p>Trân trọng,<br><i>Phát Nguyễn</i><br>Fastboy Marketing Company</p>
+        </div>
+    </div>
+    <div>
+        <div style="padding: 10px 0; text-align: center; background-color: #f8f8f8; font-size: 10px;">
+            <div>Đây là email tự động. Vui lòng không trả lời trực tiếp tin nhắn này.</div>
+            <div>&copy; {{CURRENT_YEAR}} FASTBOY MARKETING COMPANY. All rights reserved.</div>
+        </div>
+    </div>
+</div>
 </html>
