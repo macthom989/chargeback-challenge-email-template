@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Read the HTML template
-const templatePath = path.join(__dirname, 'email-template.html');
+const templatePath = path.join(__dirname, 'index.html');
 let emailTemplate = fs.readFileSync(templatePath, 'utf8');
 
 // Sample data to replace variables
